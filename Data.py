@@ -3,6 +3,7 @@ class Data:
         self.setData(data)
         self.setInp(inp)
         self.setOut(out)
+        
     def setData(self, data):
         self.__data = data
     def setInp(self, inp):
@@ -15,6 +16,7 @@ class Data:
         return self.__inp
     def getOut(self):
         return self.__out
+    
     def readFile(self, filename):
         self.setInp(filename)
         self.read()

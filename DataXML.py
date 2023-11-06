@@ -3,8 +3,8 @@ from Data import Data
 
 class DataXML(Data):
     def read(self):
-        dom = xml.dom.minidom.parse(self.getInp())
-        dom.normalize()
+        dom = xml.dom.minidom.parse(self.getInp()) # открытие файла
+        dom.normalize() # нормализация структуры XML-документа
         for node in dom.childNodes[0].childNodes:
             if (node.nodeType == node.ELEMENT_NODE) and (node.nodeName == 'client'):
                 code, surname, name, middlename, address, phone = 0, '', '', '', '', ''
@@ -62,6 +62,7 @@ class DataXML(Data):
                             if t[0] == "code":
                                 route = self.getData().getRoute(int(t[1]))
                                 travel_data.appendRoute(route)
+                                
     def write(self):
         dom = xml.dom.minidom.Document()
         root = dom.createElement('data')

@@ -8,8 +8,6 @@ class ClientList(GeneralList):
         else:
             GeneralList.appendItem(self, Client(code, surname, name, middlename, address, phone))
 
-    def newItem(self, surname='', name='', middlename='', address='', phone=''):
-        GeneralList.appendItem(self, Client(self.getNewCode(), surname, name, middlename, address, phone))
 
     def getStr(self):
         s = ''
