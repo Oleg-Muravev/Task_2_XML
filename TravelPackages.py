@@ -1,7 +1,10 @@
 from ClientList import ClientList
+from General import General
 from RouteList import RouteList
-class Packages: 
-    def __init__(self, date='', quantity=0, discount=0):
+
+class Packages(General):
+    def __init__(self, code=0, date='', quantity=0, discount=0):
+        General.__init__(self, code)
         self.__clientList = ClientList()
         self.__routeList = RouteList()
         self.setDate(date)
@@ -33,6 +36,11 @@ class Packages:
         self.__routeList.appendItem(value)
     def removeRoute(self, value):
         self.__routeList.removeItem(value)
+    
+    def getClientCodes(self):
+        return self.__clientList.getCodes()
+    def getRouteCodes(self):
+        return self.__routeList.getCodes()
 
     def getPackageInf(self):
         s = 'Information about travel package:\n'

@@ -1,5 +1,8 @@
-class Client:
-    def __init__(self, surname='', name='', middlename='', address='', phone=''):
+from General import General
+
+class Client(General):
+    def __init__(self, code=0, surname='', name='', middlename='', address='', phone=''):
+        General.__init__(self, code)
         self.setSurname(surname)
         self.setName(name)
         self.setMiddlename(middlename)

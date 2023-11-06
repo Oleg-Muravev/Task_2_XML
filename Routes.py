@@ -1,5 +1,8 @@
-class Routes: 
-    def __init__(self, country='', climate='', duration=0, hotel='', cost=0):
+from General import General
+
+class Routes(General):
+    def __init__(self, code=0, country='', climate='', duration=0, hotel='', cost=0):
+        General.__init__(self, code)
         self.setCountry(country)
         self.setClimate(climate)
         self.setDuration(duration)

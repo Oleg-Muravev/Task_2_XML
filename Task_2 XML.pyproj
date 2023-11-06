@@ -4,7 +4,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>1915041f-4b02-417a-8220-036ff8300333</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Main.py</StartupFile>
+    <StartupFile>Main2.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,11 +23,22 @@
   <ItemGroup>
     <Compile Include="Client.py" />
     <Compile Include="ClientList.py" />
+    <Compile Include="Data.py" />
+    <Compile Include="DataXML.py" />
+    <Compile Include="General.py" />
     <Compile Include="GeneralList.py" />
     <Compile Include="Main.py" />
+    <Compile Include="Main2.py" />
     <Compile Include="RouteList.py" />
     <Compile Include="Routes.py" />
+    <Compile Include="TravelCompany.py" />
+    <Compile Include="TravelList.py" />
     <Compile Include="TravelPackages.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="New.xml" />
+    <Content Include="Old.xml" />
+    <Content Include="UML.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in
